@@ -2,6 +2,8 @@
 - hosts: all
   become: true
   tasks:
-    - name: Print OS info
-      ansible.builtin.package:
-          name: apache2
+    - name: Start apache 
+      service: 
+      name: apache2 
+      state: started
+      enabled: yes
