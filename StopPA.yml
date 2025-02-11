@@ -1,0 +1,23 @@
+- name: Palo Alto Playbook
+  hosts: PA44
+  gather_facts: false
+  connection: local
+
+  collections:
+    - paloaltonetworks.panos
+
+  vars:
+    palo_provider:
+      ip_address: '192.168.100.44'
+      username: 'apidmin'
+      password: '2wsx@WSX'
+      api_key: 'LUFRPT1lNVhoaXdNYXI3NUNlUGs2dStOUnBkdVd6NjQ9ZVZMV2wrQ2xwWnVmQVBzOGJGRnBmbk9sdVlJVWdMcVgvVFBIVnM0Sk9qZlJiNzdJVnRhQWJ3cFJJQ3cvRytzTA=='
+
+  tasks:
+    - name: Issue firewall shutdown command
+      paloaltonetworks.panos.panos_op:
+        provider: '{{ palo_provider }}'
+        cmd: '<request><shutdown><system></system></shutdown></request>'
+        cmd_is_xml: true
+      register: "cmd_output"
+      failed_when: '"Command succeeded with no output" not in cmd_output.msg'
