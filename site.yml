@@ -2,7 +2,7 @@
 - hosts: all
   become: true
   tasks:
-    - name: Start apache 
+    - name: Start Apache Service 
       service: 
       name: apache2 
       state: started
