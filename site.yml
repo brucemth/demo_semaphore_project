@@ -5,4 +5,4 @@
     - name: Start Apache
       service:
         name: apache2
-        state: start
+        state: started
