@@ -14,7 +14,7 @@
   tasks:
     - name: Issue firewall shutdown command
       paloaltonetworks.panos.panos_op:
-        provider: '{{ provider }}'
+        provider: '{{ device }}'
         cmd: '<request><shutdown><system></system></shutdown></request>'
         cmd_is_xml: true
       register: "cmd_output"
