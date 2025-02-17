@@ -18,7 +18,6 @@
   hosts: all
   tasks:
     - name: Issue firewall shutdown command
-      paloaltonetworks.panos.panos_op:
         provider: '{{ palo_provider }}'
         cmd: '<request><shutdown><system></system></shutdown></request>'
         cmd_is_xml: true
