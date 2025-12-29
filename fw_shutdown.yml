@@ -5,10 +5,10 @@
   
   vars:
     palo_provider:
-      ip_address: '192.168.100.44'
-      username: 'apidmin'
-      password: '2wsx@WSX'
-      api_key: 'LUFRPT1lNVhoaXdNYXI3NUNlUGs2dStOUnBkdVd6NjQ9ZVZMV2wrQ2xwWnVmQVBzOGJGRnBmbk9sdVlJVWdMcVgvVFBIVnM0Sk9qZlJiNzdJVnRhQWJ3cFJJQ3cvRytzTA=='
+      ip_address: '192.168.100.xxx'
+      username: 'api'
+      password: '2wsx'
+      api_key: 'LUFRPT1lNVhoaXdNYXI3NUNlUGs2dStOUnBkdvVFBIVnM0Sk9qZlJiNzdJVnRhQWJ3cFJJQ3cvRytzTA=='
 
   tasks:
     - name: Issue firewall shutdown command
